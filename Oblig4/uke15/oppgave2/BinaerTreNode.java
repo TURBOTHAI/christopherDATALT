@@ -51,4 +51,12 @@ public class BinaerTreNode<T>{
 	public boolean erLoev() {
 		return (venstre == null) && (hogre == null);
 	}
+
+	public int getHogdeU() {
+		return hogdeU;
+	}
+
+	public void setHogdeU(int hogdeU) {
+		this.hogdeU = hogdeU;
+	}
 }
