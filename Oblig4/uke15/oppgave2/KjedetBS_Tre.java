@@ -53,6 +53,40 @@ public class KjedetBS_Tre<T extends Comparable<? super T>> extends BinaerTre<T> 
 
 		return svar;
 	}
+	
+	public boolean erBalansert(BinaerTreNode<T> p) {
+		
+		// basis p == null -> tomt tre, element finst ikkje
+		if(p==null) {
+			return true;// et tomt tre er et balansert tre
+		}
+		// denne metoden kommer ikkje til å fungerer skikkelig før vi har en metode til som opptaterer HogdeU for hver node/undertree som går ned over
+		
+	
+	    int hogdeUv;
+	    
+	    if(p.getVenstre()!=null) {
+	    	hogdeUv= p.getVenstre().getHogdeU();
+	    	
+	    } else {
+	    	hogdeUv=-1;
+	    }
+	    
+	    int hogdeUh;
+	    if(p.getHogre()!=null) {
+	    	hogdeUh = p. getHogre().getHogdeU();
+	    } else {
+	    	hogdeUh=-1;
+	    	
+	    }
+	    
+	    if (Math.abs(hogdeUv - hogdeUh) > 1) {
+	        return false;
+	    }
+	    
+	    return erBalansert(p.getVenstre()) && erBalansert(p.getHogre());
+		
+	}
 
 	@Override
 	public T leggTil(T nyttElement) {
