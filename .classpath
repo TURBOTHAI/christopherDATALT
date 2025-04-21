@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="eksamenREP"/>
 	<classpathentry kind="src" path="Oblig4"/>
+	<classpathentry kind="src" path="DAT107eksamenREP"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
