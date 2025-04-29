@@ -1,13 +1,13 @@
 
-package oppgave3_eks2025;
+package eksamen2025;
 
 import java.math.BigDecimal;
 
-public class opp3 {
+public class opp3aMatrett {
 	
-	@Entity//dette her er når du lager en tabell
+	@Entity//Entity er det samme som en relasjon kan du si "tabell"
 	
-	public class Matrett{//
+	public class Matrett{//må ha en klasse på selve relasjonen
 		@Id GeneratedValue (strategy= GenerationType.IDENTETY)
 		private int id;// her må id være under for at den skal bli godkjent som GeneratedValue
 		
@@ -22,6 +22,26 @@ public class opp3 {
 			joinColums = @JoinColumn(name="matrett_id"),
 			inversJoinColumns= @JoinColumn(name="ingreduens_id"))
 		private List<Ingrediens> ingredienser;
+		
+	}
+	
+}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
 		
 		
 		
