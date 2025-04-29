@@ -22,7 +22,7 @@ public class opp3aMatrett {
 			joinColums = @JoinColumn(name="matrett_id"),
 			inversJoinColumns= @JoinColumn(name="ingreduens_id"))
 		private List<Ingrediens> ingredienser;
-		
+		//endret
 	}
 	
 }

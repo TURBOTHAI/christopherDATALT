@@ -2,7 +2,7 @@ package eksamen2025;
 
 public class opp3Ingrediens {
 	
-	
+	//endret
 	@Entity
 	public class Ingrediens{		
 		@Id 
