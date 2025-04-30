@@ -1,6 +1,6 @@
 package eksamen2025;
 
-public class opp3Ingrediens {
+public class opp3aIngrediens {
 	
 	//endret
 	@Entity
