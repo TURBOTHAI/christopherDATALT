@@ -1,0 +1,95 @@
+{
+	"starters" : [
+		{
+		"name" : "hvitloksbro",
+		"description" : "løk brød med ost",
+		"price" : 100.0
+		}, {
+			"name" : "aiolismor",
+			"description" : "smor med aioli" ,
+			"price" : 200.0
+			
+		}],
+	"mainCourses" :[{
+		"name" : "lasange",
+		"description" : "pasta og tomat",
+		"price" : 230.0
+	},{
+		"name" : "spagetti",
+		"description" : "pasta og tomat",
+		"price" : 240.0
+	}],
+	
+	"desserts":[{
+		"name" : "is",
+		"description" : "melk",
+		"price" : 260.0
+		
+	},{
+		"name" : "sjokoladekake",
+		"description" : "sjokolade og brød",
+		"price" : 400.0
+		
+	}
+		
+	]
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version ="1.0" encoding = "utf-8"?>
+		<menu xmlns=http://eksamen.hvl.no/databaser
+			xmlns:xsi=http://www.w3.org/2001/XMLSCHEMA-instance"
+			xsi:schemaLocation="http://eksamen.hvl.no/databaser oppg4-1.xsd">
+				<starters>
+				 <starter name ="hvitloksbro">
+					<description> løk brød med ost </description>
+					<price> 100.00 </price>
+				 </starter>
+				 <starter name ="aviolismor">
+					<description> avioli med smør </description>
+					<price> 23.00 </price>
+				 </starter>
+				</starters>		
+				
+				<mainCourses>
+				 <mainCourse name ="lasange">
+					<description>  pasta med tomat </description>
+					<price> 43.00 </price>
+					<allergen> gluten </allergen>
+				</mainCourse>				
+				 <mainCourse name ="spagetti">
+					<description>  pasta med tomat </description>
+					<price> 44.00 </price>
+				   <allergener>
+					<allergen> gluten </allergen>
+				   </allergner>
+				 </mainCourse>
+				</mainCourses>
+				
+				<desserts>
+				 <dessert name= "is">
+					<description> melk </description>
+					<price> 100.00 </price>
+				 <dessert name= "sjokoladekake">
+					<description> sjokalade og brød</description>
+					<price> 200.00 </price>
+				</desserts>
+         </menu>
+         

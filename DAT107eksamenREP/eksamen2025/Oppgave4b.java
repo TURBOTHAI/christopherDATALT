@@ -1,6 +1,6 @@
 package eksamen2025;
 
-public class Oppgave4 {
+public class Oppgave4b {
 	/*
 	a) Hvilken av følgende påstander er korrekt?
 			1. XML Schema benyttes til å beskrive lovlig oppbygning av JSON dokumenter
@@ -34,12 +34,65 @@ public class Oppgave4 {
 			En av rettene skal innholde et allergen (f.eks. Gluten).
 			
 			
-			<?xml verison="1.0" encodig="utf-8" ?>// dette er for å opprette selve dokumentet
-			<menu
-			xmlns=http:"//eksamen.hvl.no/databaser" dette er navnerommet til vårt xml dokument. så alle elementer som blir lest
-														tar utgangspunkt i "databaser"
-			xmlns:xsi="http://ww
-			xmlns:xsi=http_//
+			<?xml version ="1.0" encoding = "utf-8"?>
+			<menu xmlns=http://eksamen.hvl.no/databaser
+				xmlns:xsi=http://www.w3.org/2001/XMLSCHEMA-instance"
+				xsi:schemaLocation="http://eksamen.hvl.no/databaser oppg4-1.xsd">
+					<starters>
+					 <starter name ="hvitloksbro">
+						<description> løk brød med ost </description>
+						<price> 100.00 </price>
+					 </starter>
+					 <starter name ="aviolismor">
+						<description> avioli med smør </description>
+						<price> 23.00 </price>
+					 </starter>
+					</starters>		
+					
+					<mainCourses>
+					 <mainCourse name ="lasange">
+						<description>  pasta med tomat </description>
+						<price> 43.00 </price>
+						<allergen> gluten </allergen>
+					</mainCourse>				
+					 <mainCourse name ="spagetti">
+						<description>  pasta med tomat </description>
+						<price> 44.00 </price>
+					   <allergener>
+						<allergen> gluten </allergen>
+					   </allergner>
+					 </mainCourse>
+					</mainCourses>
+					
+					<desserts>
+					 <dessert name= "is">
+						<description> melk </description>
+						<price> 100.00 </price>
+					 <dessert name= "sjokoladekake">
+						<description> sjokalade og brød</description>
+						<price> 200.00 </price>
+					</desserts>
+	         </menu>
+	         
+	         
+	         
+	 
+				   
+				   
+					
+						
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+					
 			
 			
 			
