@@ -35,7 +35,24 @@ public class opp3b {
 	
 	public boolean leverTilbakeBok(int bokid) {
 		
-		String sporring ="SELECT b FROM b.Bok "
+		String sporring ="SELECT h FROM Utlaan h WHERE h.bokid=:bokid"
+				
+		EntityManeger em = emf.createEntityManeger();		
+		EntityTransaction tx = em.getTransaction();		
+		
+		try {
+			TypedQuery<Utlaan> querry = em.creatQuerry(sporring, Utlaan.class);
+			querry.setParameter("bokid", bokid);
+			
+			List<Utlaan> resultat = query.getResultList();
+			
+			if(resultat.size()) {
+				
+			}
+			
+		} finally {
+			em.close();
+		}
 		
 		
 	}

@@ -35,7 +35,7 @@ public class opp3a {
 		private int id;
 		
 		@ManyToOne @JoinColumn(name="bokid")
-		private Bok bokid;
+		private Bok bokid
 		
 		@ManyToOne @JoinColumn(name="medlemnr")
 		private Medlem medlemnr;
