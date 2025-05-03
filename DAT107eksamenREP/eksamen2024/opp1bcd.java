@@ -1,8 +1,10 @@
 package eksamen2024;
 
-import eksamen2024.opp3a.Medlem;
+import java.util.List;
 
-public class opp3b {
+import eksamen2024.opp1a.Medlem;
+
+public class opp1bcd {
 	
 	public Medlem finnMedlemMedNr(int medlemnr) {
 		
@@ -18,7 +20,8 @@ public class opp3b {
 	
 	public List<Bok>finnBokerPaaForfatter(String forfatter){
 		
-		String sporring = "SELECT b FROM b.Bok WHERE b.forfatter:= forfatter"
+		String sporring = "SELECT b FROM b.Bok WHERE b.forfatter:= forfatter";
+		
 		
 		EntityManeger em = emf.createEntityManeger();
 		
@@ -35,7 +38,10 @@ public class opp3b {
 	
 	public boolean leverTilbakeBok(int bokid) {
 		
-		String sporring ="SELECT h FROM Utlaan h WHERE h.bokid=:bokid"
+		String sporring = """ 
+				SELECT h FROM Utlaan h WHERE h.bokid=:bokid 
+				AND h.returdato = null """ ;
+
 				
 		EntityManeger em = emf.createEntityManeger();		
 		EntityTransaction tx = em.getTransaction();		
@@ -44,18 +50,26 @@ public class opp3b {
 			TypedQuery<Utlaan> querry = em.creatQuerry(sporring, Utlaan.class);
 			querry.setParameter("bokid", bokid);
 			
-			List<Utlaan> resultat = query.getResultList();
+			Utlaan utlaan = querry.getSingelResult();// henter en og baren en bok som er på utlaan
+			utlaan.setReturdato(LocalDate.now());//setter return datoen fra null til datoen akkurat no
+			tx.commit();
 			
-			if(resultat.size()) {
-				
-			}
+			return true;
 			
-		} finally {
-			em.close();
+			
+		} catch (NoResultException | NonUniqueResultException e ){
+			tx.rollback();//viss en prøver å levere en bok som ikkj eer registert i Utlaan, altså den er ikkje satt som utlaan
+			//eller viss det er flere utlaan på samme bok
+			return false;
+			
+			} finally {
+				em.close();
 		}
 		
+			
+		}
 		
 	}
 	
 
-}
+

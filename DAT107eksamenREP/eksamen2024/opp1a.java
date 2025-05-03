@@ -1,6 +1,6 @@
 package eksamen2024;
 
-public class opp3a {
+public class opp1a {
 	
 	
 	@Entity
