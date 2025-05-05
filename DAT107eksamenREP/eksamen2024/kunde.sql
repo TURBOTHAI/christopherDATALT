@@ -28,7 +28,6 @@ CREATE INDEX epost_index ON Kude(epost);
 
 SELECT * FROM Ordre ORDER BY kunde_id desc;
 /* Velger den relasjonen som skal bli tatt i bruk, her er det Ordre som vi skal ta utgangspunktet i, 
-også bruker vi ORDER BY som velger ka rekke føgle til skal være i, 
 deretter så velger vi ka kolonne vi har lyst å endre rekke følge på. 
 Vi velger kunde_id og bruker desc som er en descending rekke følge eks(9-8-7-6..)
 Standart sortering er stigende rekkefølge*/
@@ -39,10 +38,15 @@ WHERE Ordre.kunde_ id = Kunde.kunde_id
 ORDER BY Ordre.kunde_id desc;
 
 
+SELECT kunde.*, count(ordre.kunde_id) -- henter alle kolonnene fra tabellen kunde og tell antall kunde id i tabellen ordre
+FROM kunde inner join ordre on kunde.kunde_id = ordre.kunde_id group by kunde.kunde_id;
+
+SELECT Kunde.*, count(ordre.kunde_id)
+FROM Kunde left join Ordre ON Kunde.kunde_id= ordre.kunde_id group by kunde.kunde_id;
 
 
 
-
+-- (4+50+20)*antall personer = bytes
 
 
 

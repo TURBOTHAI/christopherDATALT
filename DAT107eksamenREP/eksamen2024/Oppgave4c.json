@@ -1,0 +1,31 @@
+{
+	"Ordrer" : [
+		{
+		"OrdreId": 1,
+		"Kunde" :{
+				"Kundenavn" : "Christopher",
+				"Epost" : "christopher@gmail.com",
+			"Postadresse" : {
+				"Adresse" : "Råkebakkane19",
+				"Postnr" : 5337,
+				"PostSted": "Rong"
+			}
+		},		
+	    "Varer": [
+			{
+				"VareId": 100001,
+				"Varenavn" : "Tine melk",
+				"Antall": 1,
+				"Pris":35,
+				"Rabattkode": "VIP"				
+			},
+			{
+				"VareId": 100002,
+				"Varenavn" : "Oransje bannaner",
+				"Antall": 2,
+				"Pris":50,
+			}
+		]
+	}
+ ]
+}
