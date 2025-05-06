@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="eksamenREP"/>
+	<classpathentry kind="src" path="DAT102eksamenREP"/>
 	<classpathentry kind="src" path="Oblig5"/>
 	<classpathentry kind="src" path="DAT107eksamenREP"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
