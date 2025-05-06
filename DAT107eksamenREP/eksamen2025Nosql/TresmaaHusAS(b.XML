@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="enheter" type="enheterType" />
+<xs:complexType name="enheterType">
+<xs:sequence>
+<xs:element name="enhet" type="enhetType" minOccurs="0"
+maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="enhetType">
+<xs:sequence>
+<xs:element name="overskrift" type="xs:string"/>
+<xs:element name="beskrivelse" type="xs:string"/>
+<xs:element name="detaljer" type="detaljerType"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:integer" use="required"/>
+<xs:attribute name="kategori" type="KategoriType" use="required"/>
+</xs:complexType>
+<xs:complexType name="detaljerType">
+<xs:sequence>
+<xs:element name="soverom" type="soveromType"/>
+<xs:element name="bad" type="xs:positiveInteger"/>
+<xs:element name="internett" type="jaNeiType"/>
+<xs:element name="parkering" type="jaNeiType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="soveromType">
+<xs:attribute name="antall" type="xs:positiveInteger" use="required"/>
+<xs:attribute name="sengeplasser" type="xs:positiveInteger" use="required"/>
+</xs:complexType>
+
+<xs:simpleType name="KategoriType">
+	<xs:restriction base="xs:string">
+	<xs:enumeration value = "Hus"/>
+	<xs:enumeration value ="Loftsleilighet"/>
+	<xs:enumeration value ="Kjellerleilighet"/>
+	<xs:enumeration value ="Hytte"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="jaNeiType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Ja"/>
+<xs:enumeration value="Nei"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

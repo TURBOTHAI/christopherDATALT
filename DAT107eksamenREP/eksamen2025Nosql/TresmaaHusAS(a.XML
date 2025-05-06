@@ -1,0 +1,35 @@
+<!-- XML dokumentet skal inneholde data om
+totalt to utleieenhet i kategorien “Hytte” og “Hus” (en enhet i hver kategori)-->
+
+<?xml_version ="1.0" encoding="UTF-8"?>
+	<enheter xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="enheter.xsd">
+	<enhet id="1" kategori="hytte">
+		<overskrift>Soldekker</overskrift>
+		<beskrivelse>veldig fin plass</beskrivelse>
+		<detaljer>
+				<soverom antall= "1" sengeplasser = "2"/>
+				<bad>1</bad>
+				<internett>ja</internett>
+				<parkering>ja</parkering>				
+		</detaljer>
+	</enhet>
+	<enhet id="2" kategori="hus">
+		<overskrift>slagmarka</overskrift>
+		<beskrivelse>forferdelig plass</beskrivelse>
+		<detaljer>
+			<soverom antall= "2" sengeplasser = "3" />
+				<bad>1</bad>
+				<internett>nei</internett>
+				<parkering>nei</parkering>
+		</detaljer>
+	</enhet>
+   </enheter>
+	
+	
+
+
+
+
+
+
