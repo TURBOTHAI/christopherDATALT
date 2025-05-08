@@ -1,0 +1,8 @@
+{
+	"_id" : 1,
+	"Kategori" : "Pizza",
+	"Tittel" : "Grandiosa",
+	"Kalorier" : 533,
+	"datoOpptatert" : ISODATE("2025-05-08T12:00:00Z"),
+	"datoOpprettet" : ISODDATE(""2025-05-08T12:00:00Z"")
+}
